@@ -1,0 +1,18 @@
+---
+layout:     post
+title:      "Hello 2018"
+subtitle:   " \"Hello World, Hello Blog\""
+date:       2018-03-17 17:27:00
+author:     "Huhood"
+header-img: "img/post-bg-2015.jpg"
+catalog: true
+tags:
+    - 生活
+---
+
+> 终于, 新博开通
+
+
+## 前言
+
+此时还在公司加班的我，终于将
