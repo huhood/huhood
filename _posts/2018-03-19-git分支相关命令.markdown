@@ -1,0 +1,115 @@
+---
+layout:     post
+title:      "git分支相关命令"
+subtitle:   " \"git命令, git分支, git branch\""
+date:       2018-03-19 08:59:00
+author:     "Huhood"
+header-img: "img/post-bg-git.jpg"
+catalog: true
+tags:
+    - 技术
+---
+
+
+
+# Git分支相关命令汇总
+
+- 拉取远程分支
+
+  ```
+  // 拉取远程分支
+  git fetch origin <remote-branchname>:<local-branchname>
+
+  // 拉取远程分支并切换到该分支
+  git checkout -b <local-branchname> origin/<remote-branchname>
+  ```
+
+  ​
+
+- 查看分支
+
+  ```
+  // 查看远程和本地分支
+  git branch -a
+
+  // 查看远程分支
+  git branch -r
+
+  // 查看本地分支
+  git branch
+  ```
+
+  ​
+
+- 新建分支
+
+  ```
+  // 新建远程分支
+  git checkout -b <local-branchname>                 			// 先新建本地分支
+  git push origin <local-branchname>:<remote-branchname>  	// 提交到远程分支
+  git branch --set-upstream-to=origin/<remote-branchname> <local-branchname> // 关联本地与远程分支
+
+  // 新建本地分支
+  git checkout -b <local-branchname>
+  ```
+
+  ​
+
+- 删除分支
+
+  ```
+  // 删除本地分支
+  git branch -d <local-branchname>
+
+  // 删除远程分支
+  git branch -r -d origin/<remote-branchname>
+  git push origin :<remote-branchname>
+  ```
+
+  ​
+
+- 更改分支名
+
+  ```
+  // 更改本地分支名
+  git branch -m <oldbranch> <newbranch>
+
+  // 更改远程分支名
+  git push -d origin <oldbranch> 			// 删除远程分支
+  git branch -m <oldbranch> <newbranch>	// 修改本地分支名
+  git push origin <newbranch>				// 推送本地分支
+  ```
+
+  ​
+
+- 合并分支
+
+  这个篇幅比较长，到时候采用单独的文章来描述
+
+### git中一些选项解释
+
+```
+-d
+--delete：删除
+
+-D
+--delete --force的快捷键
+
+-f
+--force：强制
+
+-m
+--move：移动或重命名
+
+-M
+--move --force的快捷键
+
+-r
+--remote：远程
+
+-a
+--all：所有
+```
+
+
+
